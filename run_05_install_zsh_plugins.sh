@@ -1,5 +1,7 @@
 #!/bin/sh
 
+set -e
+
 . ./.profile
 
 # Use antibody static loading
