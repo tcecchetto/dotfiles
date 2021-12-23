@@ -20,25 +20,19 @@ export XDG_TEMPLATES_DIR="$HOME/Templates"
 export XDG_VIDEOS_DIR="$HOME/Videos"
 
 # Homebrew
-{{- if eq .chezmoi.os "darwin" }}
-export HOMEBREW_PREFIX="/usr/local"
-export HOMEBREW_CELLAR="/usr/local/Cellar"
-export HOMEBREW_REPOSITORY="/usr/local/Homebrew"
-{{- else }}
-export HOMEBREW_PREFIX="/home/linuxbrew/.linuxbrew"
-export HOMEBREW_CELLAR="/home/linuxbrew/.linuxbrew/Cellar"
-export HOMEBREW_REPOSITORY="/home/linuxbrew/.linuxbrew/Homebrew"
-{{- end }}
+export HOMEBREW_PREFIX="/opt"
+export HOMEBREW_CELLAR="/opt/homebrew/Cellar"
+export HOMEBREW_REPOSITORY="/opt/homebrew"
 
 # Configure brew bundle
 export HOMEBREW_BUNDLE_FILE=$HOME/.Brewfile
 export HOMEBREW_BUNDLE_NO_LOCK=true
 
 # asdf
-export ASDF_DIR=$HOMEBREW_PREFIX/opt/asdf/libexec
+export ASDF_DIR=$HOMEBREW_REPOSITORY/opt/asdf/libexec
 export ASDF_DATA_DIR=$ASDF_DIR
 
 # Paths
-export PATH=$ASDF_DIR/bin:$ASDF_DIR/shims:$HOMEBREW_PREFIX/bin:$HOMEBREW_PREFIX/sbin:$PATH
-export FPATH=$ASDF_DIR/completions:$HOMEBREW_PREFIX/share/zsh/site-functions:$FPATH
+export PATH=$HOMEBREW_REPOSITORY/bin:$HOMEBREW_REPOSITORY/opt:$HOMEBREW_REPOSITORY/Cellar:/usr/local/bin:/usr/local/sbin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:$ASDF_DIR/bin:$ASDF_DIR/shims:$HOMEBREW_PREFIX/bin:$HOMEBREW_PREFIX/sbin:$PATH
+export FPATH=$ASDF_DIR/completions:$HOMEBREW_REPOSITORY/share/zsh/site-functions:$FPATH
 export MANPATH=/usr/local/share/man:/usr/X11/share/man:/usr/share/man:$MANPATH:$PATH
