@@ -1,6 +1,6 @@
 deno 1.13.2
 direnv 2.29.0
-gcloud 1.1.0
+gcloud 367.0.0
 golang 1.17.1
 helm 3.5.4
 helmfile 0.139.3
