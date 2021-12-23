@@ -4,7 +4,7 @@ gcloud 367.0.0
 golang 1.17.1
 helm 3.6.0
 helmfile 0.139.3
-kubectl 2.0.0
+kubectl 1.23.0
 kubectx 0.8.0
 nodejs 16.9.0
 poetry 1.1.4
