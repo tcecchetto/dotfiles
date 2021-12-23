@@ -14,4 +14,4 @@ shellcheck 0.7.0
 shfmt 2.6.3
 skaffold latest
 sops 3.5.0
-yq 2.2.0
+yq latest
